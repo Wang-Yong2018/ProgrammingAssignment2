@@ -75,3 +75,16 @@ cacheSolve <- function(x, ...) {
   x$set_inverse(cached_solve)
   cached_solve
 }
+
+## Testing
+
+B <- matrix(c(1,2,3,4),2,2)
+
+B1 <- makeCacheMatrix(B)
+
+print(paste("first solve result",str(cacheSolve(B1))))
+
+print(str(cacheSolve(B1)))
+
+
+## getting cached data
